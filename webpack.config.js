@@ -1,39 +1,27 @@
-/*eslint-disable*/
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "development",
-  entry: {
-    index: "./src/index.js",
-    print: "./src/print.js",
-  },
-  devServer: {
-    static: "./dist",
-  },
-  devtool: "inline-source-map",
-  devServer: {
-    static: "./dist",
-  },
+  mode: 'development',
+  entry: './src/index.js',
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      title: 'Kaban Board',
+      filename: 'index.html',
+      template: 'src/index.html',
     }),
   ],
   output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
     ],
-  },
-  optimization: {
-    runtimeChunk: "single",
   },
 };
