@@ -1,4 +1,3 @@
-           
                      ###JavaScript-Group-Capstone-Project
 
 # 📗 Table of Contents
@@ -13,7 +12,7 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-<!-- - [🚀 Live Demo ](#-live-demo-) -->
+  <!-- - [🚀 Live Demo ](#-live-demo-) -->
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -23,7 +22,7 @@
 
 # 📖 Portfolio: setup and mobile first<a name="about-project"></a>
 
-- Leaderboard Application:. In this project, HTML, CSS and JavaScript technologies were used to build the JavaScript-Group-Capstone-Project application from scratch., Also used linters to analyze code to flag programming errors, bugs, stylistic errors, and suspicious constructs, and setup a template Kabanboard to ensure the distribution tasks collaboratively.
+- Kaban board Application:. In this project, HTML, CSS and JavaScript technologies were used to build the JavaScript-Group-Capstone-Project application from scratch., Also used linters to analyze code to flag programming errors, bugs, stylistic errors, and suspicious constructs, and setup a template Kabanboard to ensure the distribution tasks collaboratively.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -51,7 +50,6 @@
 
 ### Prerequisites
 
-
 1. Computer
 2. Internet
 3. Web Browser
@@ -73,7 +71,7 @@ Clone this repository to your desired folder Enter the following commands in the
 Install this project with the following command in the terminal:
 
 ```sh
- npm install 
+ npm install
  npm install --save-dev jest
  npm install jest --global
  npm install --save-dev babel-jest @babel/core @babel/preset-env
@@ -98,6 +96,7 @@ To run the project,
    2. npx stylelint "**/*.{css,scss}"
    3. npmx eslint .
 ```
+
 <!-- ## 🚀 Live Demo <a name="live-demo"></a>
 
  - [Live Demo Link](https://efmomoh.github.io/JavaScript-Group-Capstone-Project/) -->
@@ -111,11 +110,14 @@ To run the project,
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/efmomoh?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BQI%2F5GWZxS063VqRg2rilyg%3D%3D)
 
 👤 **Obote**
-- GitHub: [@githubhandle](https://github.com/obote)
 
+- GitHub: [@Obote](https://github.com/Obote/)
+- Twitter: [@Obote_denis](https://twitter.com/Obote_denis)
+- LinkedIn: [Obote-denis](https://www.linkedin.com/in/obote-denis-9859a2a3/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
+
 - basic page structure.
 - send and receive data from API.
 - final touches.
@@ -139,9 +141,8 @@ I would like to thank my Microverse codding, partners, morning sessions and my s
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE.md) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
