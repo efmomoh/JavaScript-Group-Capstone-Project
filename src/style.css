@@ -1,0 +1,39 @@
+/* MOBILE MEDIA QUERY  */
+
+@media (max-width: 768px) {
+  body {
+    background-color: teal;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: serif;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+/* DESTOP MEDIA  */
+
+@media (min-width: 768px) {
+  body {
+    background-color: teal;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: serif;
+    text-align: center;
+    color: #fff;
+  }
+}
