@@ -27,3 +27,9 @@ const closeCommentsPopup = () => {
   const commentsPopup = document.getElementById('comments-popup');
   commentsPopup.style.display = 'none';
 };
+
+document.addEventListener('click', (event) => {
+  if (event.target.classList.contains('comment-button')){
+    openCommentsPopup(showId);
+  }
+})
