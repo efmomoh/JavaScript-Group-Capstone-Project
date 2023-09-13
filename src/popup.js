@@ -6,5 +6,12 @@ const openCommentsPopup = async (showId) => {
   try {
     const response = await fetch(`${TVMAZE_BASE_URL}/shows/${showId}/comments`);
     const commentsData = await response.json(); 
-
+  
+    commentsData.forEach((comment) => {
+      const commentItem = document.createElement('div');
+      commentItem.classList.add('comment-item');
+      commentItem.textContent = comment.text;
+      commentsList.appendChild(commentItem);
+    });
+    
 };
