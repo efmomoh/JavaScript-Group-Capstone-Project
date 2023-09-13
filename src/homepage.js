@@ -49,7 +49,7 @@ const renderMovieItems = async () => {
           <h2 class="h1">${show.name}</h2>
           <i class="fa-solid fa-heart"></i>
         </section>
-        <button class="comment-button">Comments</button>
+        <button class="comment-button" data-show-id="${show.id}">Comments</button>
         `;
 
     itemList.appendChild(itemDiv);

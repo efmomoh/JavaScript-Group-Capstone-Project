@@ -29,7 +29,8 @@ const closeCommentsPopup = () => {
 };
 
 document.addEventListener('click', (event) => {
-  if (event.target.classList.contains('comment-button')){
+  if (event.target.classList.contains('comment-button')) {
+    const showId = event.target.getAttribute('data-show-id');
     openCommentsPopup(showId);
   }
-})
+});
