@@ -34,3 +34,5 @@ document.addEventListener('click', (event) => {
     openCommentsPopup(showId);
   }
 });
+
+document.getElementById('close-popup').addEventListener('click', closeCommentsPopup);
