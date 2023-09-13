@@ -47,7 +47,7 @@ const renderMovieItems = async () => {
     itemDiv.innerHTML += `
         <section class="title-like">
           <h2 class="h1">${show.name}</h2>
-          <button class="like-button">Like</button>
+          <i class="fa-solid fa-heart"></i>
         </section>
         <button class="comment-button">Comments</button>
         `;
