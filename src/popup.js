@@ -1,3 +1,5 @@
+import './homepage.js';
+
 const openCommentsPopup = async (showId) => {
   const commentsPopup = document.getElementById('comments-popup');
   const commentsList = document.getElementById('comments-list');
@@ -19,4 +21,9 @@ const openCommentsPopup = async (showId) => {
     // eslint-disable-next-line no-undef
     handleError('Error fetching comments');
   }
+};
+
+const closeCommentsPopup = () => {
+  const commentsPopup = document.getElementById('comments-popup');
+  commentsPopup.style.display = 'none';
 };
