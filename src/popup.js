@@ -1,5 +1,19 @@
-import './homepage.js';
 
+const handleError = (errorMessage) => {
+  const errorContainer = document.createElement('div');
+  errorContainer.classList.add('error-container');
+
+  const errorText = document.createElement('p');
+  errorText.classList.add('error-text');
+  errorText.textContent = errorMessage;
+
+  errorContainer.appendChild(errorText);
+
+  const errorContainerParent = document.querySelector('.error-container-parent');
+  errorContainerParent.appendChild(errorContainer);
+};
+
+const TVMAZE_BASE_URL = 'https://api.tvmaze.com';
 const openCommentsPopup = async (showId) => {
   const commentsPopup = document.getElementById('comments-popup');
   const commentsList = document.getElementById('comments-list');
@@ -7,8 +21,8 @@ const openCommentsPopup = async (showId) => {
 
   try {
     const response = await fetch(`${TVMAZE_BASE_URL}/shows/${showId}/comments`);
-    const commentsData = await response.json(); 
-  
+    const commentsData = await response.json();
+
     commentsData.forEach((comment) => {
       const commentItem = document.createElement('div');
       commentItem.classList.add('comment-item');
@@ -18,7 +32,6 @@ const openCommentsPopup = async (showId) => {
 
     commentsPopup.style.display = 'block';
   } catch (error) {
-    // eslint-disable-next-line no-undef
     handleError('Error fetching comments');
   }
 };
