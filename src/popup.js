@@ -13,5 +13,10 @@ const openCommentsPopup = async (showId) => {
       commentItem.textContent = comment.text;
       commentsList.appendChild(commentItem);
     });
-    
+
+    commentsPopup.style.display = 'block';
+  } catch (error) {
+    // eslint-disable-next-line no-undef
+    handleError('Error fetching comments');
+  }
 };
