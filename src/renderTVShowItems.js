@@ -1,7 +1,5 @@
-// renderTVShowItems.js
 import handleError from './handleError.js';
 import handleLike from './handleLike.js';
-// import handleComment from './handleComment.js';
 
 const renderTVShowItems = async () => {
   const appId = '3hIwDBxWJ2fAXT2ve8Vb';
