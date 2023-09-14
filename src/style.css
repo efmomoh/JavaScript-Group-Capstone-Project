@@ -159,7 +159,7 @@
   .p-footer a {
     color: #6070ff;
   }
-  
+
   .popup {
     display: none;
     position: fixed;
@@ -171,21 +171,23 @@
     z-index: 1;
     justify-content: center;
     align-items: center;
+
     /* transition: opacity 0.3s;
     opacity: 0; */
   }
-  
+
   .popup-content {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     text-align: center;
+
     /* max-width: 80%;
     overflow: auto;
     max-height: 80%; */
   }
-  
+
   .close {
     position: absolute;
     top: 10px;
@@ -200,7 +202,7 @@
     margin-bottom: 10px;
     color: #333;
   }
-  
+
   .popup-content img {
     max-width: 100%;
     border-radius: 10px;
@@ -212,5 +214,4 @@
     color: #666;
     margin-bottom: 20px;
   }
-  
 }

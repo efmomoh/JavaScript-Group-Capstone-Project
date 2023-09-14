@@ -28,7 +28,6 @@ const fetchTVMazeData = async () => {
   }
 };
 
-
 // Render movie items on the page
 const renderMovieItems = async () => {
   const itemList = document.querySelector('.item-list');
@@ -58,38 +57,3 @@ const renderMovieItems = async () => {
 };
   // Initial rendering
 renderMovieItems();
-
-function showPopup(showId) {
-  const popup = document.getElementById('popup');
-
-  fetch(`${TVMAZE_BASE_URL}/shows/${showId}`)
-    .then((response) => response.json())
-    .then((showDetails) => {
-      const popupContent = document.querySelector('.popup-content');
-      popupContent.innerHTML = `
-        <span class="close close-popup" id="closeButton">&times;</span>
-        <h2>${showDetails.name}</h2>
-        <img src="${showDetails.image?.medium || 'placeholder.jpg'}" alt="${showDetails.name}" />
-        <p class="description">${showDetails.summary || 'No description available.'}</p>
-        <ul id="comments-list"></ul>
-      `;
-      popup.style.display = 'block';
-    })
-    .catch((error) => {
-      console.error('Error fetching show details:', error);
-    });
-
-
-    function hidePopup() {
-      const popup = document.getElementById('popup');
-      popup.style.display = 'none';
-    }
-  
-    document.addEventListener('click', (event) => {
-      if (event.target.matches('.comment-button')) {
-        const showId = event.target.getAttribute('data-show-id');
-        showPopup(showId); 
-      } else if (event.target.matches('.close-popup')) {
-        hidePopup();
-      }
-    });
