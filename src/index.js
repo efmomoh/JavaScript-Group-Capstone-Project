@@ -1,36 +1,65 @@
 import './style.css';
-import './homepage.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  function showPopup() {
-    const popup = document.getElementById('popup');
-    popup.style.display = 'block';
+  // Function for handling error messages
+  const handleError = (errorMessage) => {
+    const errorContainer = document.createElement('div');
+    errorContainer.classList.add('error-container');
 
-    const commentsList = document.getElementById('comments-list');
-    commentsList.innerHTML = '';
+    const errorText = document.createElement('p');
+    errorText.classList.add('error-text');
+    errorText.textContent = errorMessage;
 
-    const comments = [
-      'Comment 1: This show is amazing!',
-      'Comment 2: I love the characters in this show.',
-    ];
+    errorContainer.appendChild(errorText);
 
-    comments.forEach((comment) => {
-      const listItem = document.createElement('li');
-      listItem.textContent = comment;
-      commentsList.appendChild(listItem);
-    });
-  }
+    // variable of how to display and handle errors here
+    const itemList = document.querySelector('.item-list');
+    itemList.appendChild(errorContainer);
+  };
 
-  function hidePopup() {
-    const popup = document.getElementById('popup');
-    popup.style.display = 'none';
-  }
+  // Constants
+  const TVMAZE_BASE_URL = 'https://api.tvmaze.com';
 
-  document.addEventListener('click', (event) => {
-    if (event.target.matches('.comment-button')) {
-      showPopup();
-    } else if (event.target.matches('.close-popup')) {
-      hidePopup();
+  // Fetch TVMaze data
+  const fetchTVMazeData = async () => {
+    try {
+      const response = await fetch(`${TVMAZE_BASE_URL}/shows`);
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      handleError('Error fetching TVMaze data');
+      return []; // Return an empty array in case of error
     }
-  });
+  };
+
+  // Function to render movie items
+  const renderMovieItems = async () => {
+    const itemList = document.querySelector('.item-list');
+    const tvMazeData = await fetchTVMazeData();
+
+    tvMazeData.forEach((show) => {
+      const itemDiv = document.createElement('div');
+      itemDiv.classList.add('movie-item');
+
+      // Display movie image (show.image.medium contains the URL of the medium-sized image)
+      if (show.image && show.image.medium) {
+        const image = document.createElement('img');
+        image.src = show.image.medium;
+        itemDiv.appendChild(image);
+      }
+
+      itemDiv.innerHTML += `
+        <section class="title-like">
+          <h2 class="h1">${show.name}</h2>
+          <i class="fa-solid fa-heart"></i>
+        </section>
+        <button type="button" class="comment-button" data-show-id="${show.id}">Comments</button>
+      `;
+
+      itemList.appendChild(itemDiv);
+    });
+  };
+
+  // Initial rendering
+  renderMovieItems();
 });

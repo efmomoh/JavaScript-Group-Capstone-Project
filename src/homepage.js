@@ -28,6 +28,7 @@ const fetchTVMazeData = async () => {
   }
 };
 
+
 // Render movie items on the page
 const renderMovieItems = async () => {
   const itemList = document.querySelector('.item-list');
