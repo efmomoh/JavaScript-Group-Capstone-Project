@@ -78,5 +78,18 @@ function showPopup(showId) {
     .catch((error) => {
       console.error('Error fetching show details:', error);
     });
-}
 
+
+    function hidePopup() {
+      const popup = document.getElementById('popup');
+      popup.style.display = 'none';
+    }
+  
+    document.addEventListener('click', (event) => {
+      if (event.target.matches('.comment-button')) {
+        const showId = event.target.getAttribute('data-show-id');
+        showPopup(showId); 
+      } else if (event.target.matches('.close-popup')) {
+        hidePopup();
+      }
+    });
