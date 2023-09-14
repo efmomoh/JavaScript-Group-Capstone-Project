@@ -41,15 +41,17 @@
           <div class="item-list"></div>
         </section>
       </section>
-
-      <div class="popup-container" id="comments-popup">
-        <div class="popup-content">
-          <span class="close-button" id="close-popup">&times;</span>
-          <h2 class="popup-title">Comments</h2>
-          <div class="comments-list" id="comments-list"></div>
-        </div>
-      </div>
+     
     </main>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close close-popup" id="closeButton">&times;</span>
+        <p>This is a popup!</p>
+        <ul id="comments-list"></ul>
+      </div>
+    </div>
+
+  
 
     <footer class="footer">
       <p class="p-footer">
@@ -62,6 +64,7 @@
         >
       </p>
     </footer>
-    <script src="index.js"></script>
+    
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
