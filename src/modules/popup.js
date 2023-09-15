@@ -1,7 +1,7 @@
 class PopUp {
-    seasonList = (movie) => {
+    seasonList = (arr) => {
       const popupContainer = document.querySelector('.popup-container');
-      movie.forEach((element) => {
+      arr.forEach((element) => {
         const div = document.createElement('div');
         div.classList.add('popup-content', 'd-none');
         div.innerHTML = `
