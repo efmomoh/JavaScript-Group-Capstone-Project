@@ -2,6 +2,7 @@ import './style.css';
 import RenderTVShowsItems from './modules/renderTVShowItems.js';
 import Homepage from './modules/homepage.js';
 import { likeEvent, renderLike } from './modules/likes.js';
+import pageCount from './modules/pageCounter.js';
 
 const url = 'https://api.tvmaze.com/shows/6/seasons';
 
@@ -17,5 +18,6 @@ window.onload = () => {
     view.seasonList(arr);
     renderLike();
     likeEvent();
+    pageCount();
   }
 };
