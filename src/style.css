@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
 /* MOBILE MEDIA QUERY  */
 
 @media (max-width: 768px) {
@@ -22,11 +24,12 @@
 
 @media (min-width: 768px) {
   body {
-    background-color: teal;
+    background-color: #f7f7f9;
     margin: 0;
     padding: 0;
     width: 100%;
     height: auto;
+    box-sizing: border-box;
   }
 
   .h1 {
@@ -34,6 +37,87 @@
     font-weight: 700;
     font-family: serif;
     text-align: center;
+    color: #000;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    height: 4rem;
+    border: 0.3rem solid #000;
+    position: fixed;
+    bottom: 0;
+    width: 99.2%;
+  }
+
+  .p-footer {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .p-footer a {
+    color: #6070ff;
+  }
+
+  .header {
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 99.2%;
+    margin-left: 2rem;
+  }
+
+  .logo-wrapper {
+    background: white;
+    text-align: center;
+    margin-left: 5rem;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 10px;
+    width: 25%;
+    height: auto;
+  }
+
+  .logo {
+    display: block;
+    font-family: "Poppin", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+    height: auto;
+    text-decoration: none;
+  }
+
+  .logo:hover {
+    color: red;
+    background-color: #000;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  .update-p {
+    color: #000;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .update-p:hover {
     color: #fff;
+    background-color: teal;
+    border-radius: 8px;
+    text-decoration: underline;
+  }
+
+  .movie-update,
+  .seasons,
+  .episodes,
+  .shows {
+    text-decoration: none;
+    margin-top: 1.5rem;
   }
 }
