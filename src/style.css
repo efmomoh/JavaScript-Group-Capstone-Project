@@ -269,6 +269,20 @@
     display: none;
   }
 
+  .center {
+    text-align: center;
+  }
+
+  .synopsis {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .end {
+    padding-right: 32px;
+  }
+  
+
 
   .footer {
     display: flex;

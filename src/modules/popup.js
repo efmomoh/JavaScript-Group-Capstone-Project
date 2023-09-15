@@ -1,6 +1,6 @@
-class PopUp {
+class CommentPopup {
     seasonList = (arr) => {
-      const popupContainer = document.querySelector('.popup-container');
+      const commentPopup = document.querySelector('.popup-container');
       arr.forEach((element) => {
         const div = document.createElement('div');
         div.classList.add('popup-content', 'display-none');
@@ -19,9 +19,9 @@ class PopUp {
                 <p class="second-element">Channel Network: ${element.network.name}</p>
             </div>
             `;
-        popupContainer.append(div);
+        commentPopup.append(div);
       });
     }
 }
 
-export default PopUp;
+export default CommentPopup;

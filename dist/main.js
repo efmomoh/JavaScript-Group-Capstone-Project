@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_renderTVShowItems_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/renderTVShowItems.js */ \"./src/modules/renderTVShowItems.js\");\n/* harmony import */ var _modules_homepage_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/homepage.js */ \"./src/modules/homepage.js\");\n\n\n\n\nconst url = 'https://api.tvmaze.com/shows/6/seasons';\nconst show = new _modules_renderTVShowItems_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](url);\nshow.getData(url);\nconst view = new _modules_homepage_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n\n// On Page Load\nwindow.onload = () => {\n  if (localStorage.getItem('data')) {\n    const arr = JSON.parse(localStorage.getItem('data'));\n    view.seasonList(arr);\n  }\n};\n\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_renderTVShowItems_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/renderTVShowItems.js */ \"./src/modules/renderTVShowItems.js\");\n/* harmony import */ var _modules_homepage_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/homepage.js */ \"./src/modules/homepage.js\");\n/* harmony import */ var _modules_popup_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/popup.js */ \"./src/modules/popup.js\");\n/* harmony import */ var _modules_popupevent_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/popupevent.js */ \"./src/modules/popupevent.js\");\n\n\n\n\n\n\n\n\nconst url = 'https://api.tvmaze.com/shows/6/seasons';\nconst show = new _modules_renderTVShowItems_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](url);\nshow.getData(url);\nconst view = new _modules_homepage_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\nconst commentPopup = new _modules_popup_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]();\n\n// On Page Load\nwindow.onload = () => {\n  if (localStorage.getItem('data')) {\n    const arr = JSON.parse(localStorage.getItem('data'));\n    view.seasonList(arr);\n    commentPopup.seasonList(arr);\n    (0,_modules_popupevent_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n  }\n};\n\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
 
 /***/ }),
 
@@ -127,6 +127,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass Homepage {\n  seasonList = (arr) => {\n    const viewBox = document.querySelector('#view-box');\n    arr.forEach((element) => {\n      const div = document.createElement('div');\n      div.innerHTML = `\n      <div class=\"season-card\">\n      <img src=\"${element.image.medium}\" alt=\"season image\" class=\"card-image\">\n      <div class=\"season-details\">\n        <h4 class=\"season-title\">Season ${element.number}</h4>\n        <p class=\"likes\">\n          <span class=\"likes-counter\">0</span> likes <i class=\"fa-regular fa-heart\"></i>\n        </p>\n      </div>\n      <a href=\"\" class=\"comments btn-primary\">Comment</a>\n    </div>\n    `;\n      viewBox.append(div);\n    });\n  };\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Homepage);\n\n\n//# sourceURL=webpack://webpack-demo/./src/modules/homepage.js?");
+
+/***/ }),
+
+/***/ "./src/modules/popup.js":
+/*!******************************!*\
+  !*** ./src/modules/popup.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass CommentPopup {\n    seasonList = (arr) => {\n      const commentPopup = document.querySelector('.popup-container');\n      arr.forEach((element) => {\n        const div = document.createElement('div');\n        div.classList.add('popup-content', 'display-none');\n        div.innerHTML = `\n            <div class=\"popup-header\">\n                <img src=\"${element.image.original}\" alt=\"season ${element.number}\" class=\"popup-image\">\n                <i class=\"fa-regular fa-circle-xmark popup-close\"></i>\n            </div>\n            <h2 class=\"popup-title center\">Season ${element.number}</h2>\n            <div class=\"synopsis\">\n                <p>Premier Date: ${element.premiereDate}</p>\n                <p class=\"second-element end\">End Date: ${element.endDate}</p>\n            </div>\n            <div class=\"synopsis\">\n                <p>Episodes: ${element.episodeOrder}</p>\n                <p class=\"second-element\">Channel Network: ${element.network.name}</p>\n            </div>\n            `;\n        commentPopup.append(div);\n      });\n    }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CommentPopup);\n\n//# sourceURL=webpack://webpack-demo/./src/modules/popup.js?");
+
+/***/ }),
+
+/***/ "./src/modules/popupevent.js":
+/*!***********************************!*\
+  !*** ./src/modules/popupevent.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst popupEvent = () => {\n  const popup = document.querySelector('.popup-container');\n  const popupContent = document.querySelectorAll('.popup-content');\n  const commentButton = document.querySelectorAll('.comment-btn');\n\n  // eslint-disable-next-line no-plusplus\n  for (let i = 0; i < commentButton.length; i++) {\n    commentButton[i].addEventListener('click', () => {\n      popup.classList.remove('dispaly-none');\n      popupContent[i].classList.remove('display-none');\n\n      const popupCloseButton = popup.querySelectorAll('.close-popup');\n      popupCloseButton[i].addEventListener('click', () => {\n        popup.classList.add('display-none');\n        popupContent[i].classList.add('display-none');\n      });\n    });\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (popupEvent);\n\n\n//# sourceURL=webpack://webpack-demo/./src/modules/popupevent.js?");
 
 /***/ }),
 
