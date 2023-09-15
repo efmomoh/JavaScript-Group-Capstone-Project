@@ -3,7 +3,7 @@ class PopUp {
       const popupContainer = document.querySelector('.popup-container');
       arr.forEach((element) => {
         const div = document.createElement('div');
-        div.classList.add('popup-content', 'd-none');
+        div.classList.add('popup-content', 'display-none');
         div.innerHTML = `
             <div class="popup-header">
                 <img src="${element.image.original}" alt="season ${element.number}" class="popup-image">
