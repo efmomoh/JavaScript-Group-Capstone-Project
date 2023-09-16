@@ -99,6 +99,7 @@ To run the project,
  ## 🚀 Live Demo <a name="live-demo"></a>
 
  - [Live Demo Link](https://efmomoh.github.io/JavaScript-Group-Capstone-Project/dist/)
+ - [Presentation Video Link](https://drive.google.com/file/d/1EBRxQTuHwYHnTiAymzZm1wnxo4XF6JZL/view?usp=sharing)
 
 ## 👥 Author <a name="authors"></a>
 
