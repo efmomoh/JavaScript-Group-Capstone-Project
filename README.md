@@ -23,6 +23,7 @@
 # 📖 Portfolio: JavaScript-Group-Capstone-Project<a name="about-project"></a>
 
 - JavaScript-Group-Capstone-Project is a single-page web application built using JavaScript that provides users with an engaging experience centered around the popular TV series 'The 100.' The application seamlessly interacts with two external APIs to enhance user engagement and functionality.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
