@@ -12,7 +12,7 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  <!-- - [🚀 Live Demo ](#-live-demo-) -->
+  - [🚀 Live Demo ](#-live-demo-)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -41,7 +41,7 @@
 
 - Set up the linter for the project 👌
 - Add the styling
-- Add input name and scores forms
+- Add input name and comments
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,7 +85,7 @@ To run the project,
 
   Open the dist folder and enter the address of the index.html file from your computer/server
   Or rum npm build
-  And run npm start
+  Run npm start
 ```
 
 ### Run tests
@@ -96,9 +96,9 @@ To run the project,
    3. npmx eslint .
 ```
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
+ ## 🚀 Live Demo <a name="live-demo"></a>
 
- - [Live Demo Link](https://efmomoh.github.io/JavaScript-Group-Capstone-Project/) -->
+ - [Live Demo Link](https://efmomoh.github.io/JavaScript-Group-Capstone-Project/dist/)
 
 ## 👥 Author <a name="authors"></a>
 
