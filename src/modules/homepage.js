@@ -9,7 +9,7 @@ class Homepage {
       <div class="season-details">
         <h4 class="season-title">Season ${element.number}</h4>
         <p class="likes">
-          <span class="likes-counter">0</span> likes <i class="fa-regular fa-heart"></i>
+          <span class="likes-counter">4</span> likes <i class="fa-regular fa-heart"></i>
         </p>
       </div>
       <a href="" class="comments btn-primary">Comment</a>
