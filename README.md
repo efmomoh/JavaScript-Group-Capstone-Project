@@ -1,4 +1,4 @@
-                     ###JavaScript-Group-Capstone-Project
+                     JavaScript-Group-Capstone-Project
 
 # 📗 Table of Contents
 
@@ -20,10 +20,9 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 Portfolio: setup and mobile first<a name="about-project"></a>
+# 📖 Portfolio: JavaScript-Group-Capstone-Project<a name="about-project"></a>
 
-- Kaban board Application:. In this project, HTML, CSS and JavaScript technologies were used to build the JavaScript-Group-Capstone-Project application from scratch., Also used linters to analyze code to flag programming errors, bugs, stylistic errors, and suspicious constructs, and setup a template Kabanboard to ensure the distribution tasks collaboratively.
-
+- JavaScript-Group-Capstone-Project is a single-page web application built using JavaScript that provides users with an engaging experience centered around the popular TV series 'The 100.' The application seamlessly interacts with two external APIs to enhance user engagement and functionality.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -40,7 +39,6 @@
 ### Key Features <a name="key-features"></a>
 
 - Set up the linter for the project 👌
-- Add the node_modules folder🚀
 - Add the styling
 - Add input name and scores forms
 
