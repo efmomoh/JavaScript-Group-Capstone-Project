@@ -20,8 +20,8 @@ class CommentPopup {
             </div>
             <h3 id="comment-count" class="center">Comments (2)</h3>
             <ul class="comments">
-                <li class="comment-item">03/11/2021 Obote: I really enjoyed the 3 season</li>
-                <li class="comment-item">03/12/2021 Momoh: I love the art works</li>
+                <li class="comment-item">09/12/2023 Obote: I really enjoyed the 3 season</li>
+                <li class="comment-item">09/12/2023 Momoh: I love the art works</li>
             </ul>
             `;
         commentPopup.append(div);
