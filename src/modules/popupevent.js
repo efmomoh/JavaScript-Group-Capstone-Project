@@ -1,21 +1,21 @@
-const popupEvent = () => {
-  const popup = document.querySelector('.popup-container');
-  const popupContent = document.querySelectorAll('.popup-content');
-  const commentButton = document.querySelectorAll('.comment-btn');
+const commentEvent = () => {
+  const popup = document.querySelector('.comment-popup');
+  const popupContents = document.querySelectorAll('.popup-content');
+  const commentButtons = document.querySelectorAll('.btn-primary');
 
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < commentButton.length; i++) {
-    commentButton[i].addEventListener('click', () => {
-      popup.classList.remove('dispaly-none');
-      popupContent[i].classList.remove('display-none');
+  for (let index = 0; index < commentButtons.length; index += 1) {
+    commentButtons[index].addEventListener('click', (event) => {
+      event.preventDefault();
+      popup.classList.remove('d-none');
+      popupContents[index].classList.remove('d-none');
 
-      const popupCloseButton = popup.querySelectorAll('.close-popup');
-      popupCloseButton[i].addEventListener('click', () => {
-        popup.classList.add('display-none');
-        popupContent[i].classList.add('display-none');
+      const popupCloseButtons = popup.querySelectorAll('.popup-close');
+      popupCloseButtons[index].addEventListener('click', () => {
+        popup.classList.add('d-none');
+        popupContents[index].classList.add('d-none');
       });
     });
   }
 };
 
-export default popupEvent;
+export default commentEvent;
