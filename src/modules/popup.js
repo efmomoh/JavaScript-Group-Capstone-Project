@@ -18,7 +18,11 @@ class CommentPopup {
                 <p>Episodes: ${element.episodeOrder}</p>
                 <p class="second-element">Channel Network: ${element.network.name}</p>
             </div>
-           
+            <h3 id="comment-count" class="center">Comments (2)</h3>
+            <ul class="comments">
+                <li class="comment-item">09/12/2023 Obote: I really enjoyed the 3 season</li>
+                <li class="comment-item">09/12/2023 Momoh: I love the art works</li>
+            </ul>
             `;
         commentPopup.append(div);
       });
