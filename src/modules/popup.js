@@ -18,17 +18,7 @@ class CommentPopup {
                 <p>Episodes: ${element.episodeOrder}</p>
                 <p class="second-element">Channel Network: ${element.network.name}</p>
             </div>
-            <h3 id="comment-count" class="center">Comments (2)</h3>
-            <ul class="comments">
-                <li class="comment-item">03/11/2021 Alex: I'd love to buy it</li>
-                <li class="comment-item">03/12/2021 Mia: I love</li>
-            </ul>
-            <h3 class="center">Add a comment</h3>
-            <form class="comment-form">
-                <input type="text" id="name" name="name" class="name-input" placeholder="Your name">
-                <textarea type="text" id="text" name="text" class="text-input" placeholder="Your insights"></textarea>
-                <button type="button" id="comment-btn" class="comment-input-btn">Comment</button>
-            </form>
+           
             `;
         commentPopup.append(div);
       });
