@@ -12,7 +12,7 @@ class Homepage {
         <span class="likes-counter">0</span> likes <button class="like-button"><i class="fa-regular fa-heart"></i></button>
         </p>
       </div>
-      <a href="" class="comments btn-primary">Comment</a>
+      <button type="button" id="${element.id}" class="comments btn-primary comment-btn">Comment</button>
     </div>
     `;
       viewBox.append(div);

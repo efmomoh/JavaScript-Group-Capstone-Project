@@ -284,6 +284,38 @@
     padding-right: 32px;
   }
 
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-style {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    background-color: whitesmoke;
+    color: rgb(59, 59, 59);
+  }
+
+  .name-input {
+    width: 25vw;
+    height: 30px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+  }
+
+  .text-input {
+    width: 40vw;
+    height: 15vh;
+    margin-bottom: 20px;
+    padding-left: 10px;
+  }
+
+  .comment-input-btn {
+    width: 100px;
+    height: 30px;
+    margin: 0;
+  }
+
   ul {
     list-style-type: none;
     padding: 0;
