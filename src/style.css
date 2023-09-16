@@ -12,11 +12,196 @@
   }
 
   .h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     font-family: serif;
     text-align: center;
     color: #fff;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: serif;
+    text-align: start;
+    color: #000;
+  }
+
+  .header {
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+  }
+
+  .logo-wrapper {
+    background: white;
+    text-align: center;
+    margin-left: 0.8rem;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 10px;
+    width: 35%;
+    height: auto;
+  }
+
+  .logo {
+    display: block;
+    font-family: "Poppin", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #000;
+    font-weight: 700;
+    height: auto;
+    text-decoration: none;
+  }
+
+  .update-p {
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.3rem;
+    text-align: center;
+  }
+
+  .update-p:hover {
+    color: #fff;
+    background-color: teal;
+    border-radius: 8px;
+    text-decoration: underline;
+  }
+
+  .movie-update,
+  .seasons,
+  .episodes,
+  .shows {
+    text-decoration: none;
+    margin-top: 1.5rem;
+    color: #fff;
+  }
+
+  .movie-item {
+    margin: 30px;
+  }
+
+  img {
+    max-width: 200px;
+  }
+
+  .like-button {
+    width: auto;
+    height: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .p-heart:hover {
+    color: red;
+  }
+
+  .comment-button {
+    width: 25%;
+    margin-top: 1rem;
+  }
+
+  .main-container,
+  .section-wrapper,
+  .contents {
+    width: 100%;
+    height: auto;
+  }
+
+  .item-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 4rem;
+  }
+
+  .title-like {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Main Section */
+  .main {
+    padding: 1rem;
+  }
+
+  .main .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .season-card {
+    border: 1px solid #444;
+    border-radius: 0.5rem;
+    box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.75);
+    margin: 2rem 0;
+  }
+
+  .season-card:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 4px 6px 0 rgba(0, 0, 0, 0.75);
+  }
+
+  .card-image {
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    width: 100%;
+  }
+
+  .season-details {
+    padding: 0.5rem;
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .btn-primary {
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+    background-color: #6070ff;
+    color: #fff;
+    width: fit-content;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.75);
+    text-decoration: none;
+  }
+
+  .btn-primary:hover {
+    transform: scale(1.04);
+    background-color: #e9a47d;
+    text-decoration: underline;
+  }
+
+  .btn-primary:active {
+    transform: translateY(2px);
+    background-color: #d97135;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    height: 4rem;
+    border: 0.3rem solid #000;
+    position: fixed;
+    bottom: 0;
+    width: 99.2%;
+    background-color: #fff;
+  }
+
+  .p-footer {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .p-footer a {
+    color: #6070ff;
   }
 }
 
@@ -229,6 +414,7 @@
     position: fixed;
     bottom: 0;
     width: 99.2%;
+    background-color: #fff;
   }
 
   .p-footer {
