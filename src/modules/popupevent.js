@@ -1,5 +1,6 @@
 import addComment from './add.js';
 import { newComment, storedComments } from './api.js';
+import commentCounter from './commentcount.js';
 import CommentPopup from './popup.js';
 
 const submitComment = async (e) => {
@@ -19,6 +20,7 @@ const submitComment = async (e) => {
   });
   commList.innerHTML = html;
   e.target.reset();
+  commentCounter(dataArr);
 };
 
 const commentEvent = () => {

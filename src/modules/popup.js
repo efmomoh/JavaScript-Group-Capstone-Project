@@ -1,4 +1,5 @@
 import { storedComments } from './api.js';
+import commentCounter from './commentcount.js';
 
 class CommentPopup {
     getComments = async (id) => {
@@ -12,6 +13,7 @@ class CommentPopup {
       const div = document.createElement('div');
       div.classList.add('popup-content');
       const data = await this.getComments(element.id);
+      const commentCount = commentCounter(data);
       const comments = data.map((item) => `<li>${item.creation_date} ${item.username}: ${item.comment}</li>`).join(' ');
       div.innerHTML = `
             <div class="popup-header">
@@ -30,7 +32,7 @@ class CommentPopup {
                 <p class="second-element">Channel Network: ${element.network.name}</p>
             </div>
             <div class="comment-items">
-            <h3 id="comment-count" class="center comment-count margin-b">Comments(3)</h3>
+            <h3 id="comment-count" class="center comment-count margin-b">Comments(${commentCount})</h3>
             <ul class="comments-list margin-b">
                 ${comments}
             </ul>
