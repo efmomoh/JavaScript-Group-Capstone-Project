@@ -176,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst pageCount = () => {\n  const seasons = document.querySelector('.seasons-count');\n  const cards = document.querySelectorAll('.season-card').length;\n  seasons.innerHTML = ` Seasons ${cards}`;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pageCount);\n\n\n//# sourceURL=webpack://webpack-demo/./src/modules/pageCounter.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst pageCount = () => {\n  const seasons = document.querySelector('.seasons-count');\n  const cards = document.querySelectorAll('.season-card').length;\n  seasons.innerHTML = ` Seasons (${cards})`;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pageCount);\n\n\n//# sourceURL=webpack://webpack-demo/./src/modules/pageCounter.js?");
 
 /***/ }),
 
